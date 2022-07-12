@@ -1,4 +1,3 @@
-import { list } from "postcss";
 import { useEffect, useState } from "react";
 import Card from "./ui/Card";
 
@@ -10,7 +9,7 @@ const Category = () => {
       const res = await fetch("https://www.breakingbadapi.com/api/");
       res = await res.json();
       for (const key in res) {
-        li.push(<Card>{key.toUpperCase()}</Card>);
+        li.push(<Card k={key}>{key.toUpperCase()}</Card>);
       }
       changeList(li);
       li=[];
