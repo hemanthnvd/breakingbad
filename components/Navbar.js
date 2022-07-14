@@ -3,7 +3,7 @@ const Navbar = () => {
   return (
     <>
       <div className="bg-red-500 flex justify-between">
-        <p>bb</p>
+        <p>breakingBadLogo</p>
         <Navitem />
         
       </div>
