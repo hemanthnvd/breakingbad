@@ -8,6 +8,8 @@ const CharacterDetail = (props) => {
     <p>{props.det.status}</p>
     <p>{props.det.nickname}</p>
     <p>{props.det.portrayed}</p>
+    <p>{props.det.appearance}</p>
+    <p>{props.det.category}</p>
   </div>
   </div>;
 };

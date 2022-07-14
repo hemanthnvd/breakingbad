@@ -9,7 +9,7 @@ const CharDetail = () => {
   const [det, setDet] = useState({});
   useEffect(() => {
     const fetchCharDetail = async () => {
-      const res = await fetch(`https://www.breakingbadapi.com/api/characters/${charId}`);
+      let res = await fetch(`https://www.breakingbadapi.com/api/characters/${charId}`);
       res = await res.json();
       setDet((prevState)=>(
         res[0]

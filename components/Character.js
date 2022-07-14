@@ -6,7 +6,7 @@ const Character = () => {
   const [charLi, setCharLi] = useState([]);
   useEffect(() => {
     const fetchChar = async () => {
-      const res = await fetch("https://www.breakingbadapi.com/api/characters");
+      let res = await fetch("https://www.breakingbadapi.com/api/characters");
       res = await res.json();
       for (const item in res) {
         charList.push(<CharacterCard char_id={res[item].char_id} name={res[item].name} img={res[item].img} />);
