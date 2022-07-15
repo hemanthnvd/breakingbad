@@ -1,5 +1,10 @@
+import Navbar from "../components/Navbar";
 const quotes = () => {
-  return <></>;
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 };
 
 export default quotes;

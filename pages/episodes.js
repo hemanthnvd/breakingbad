@@ -1,5 +1,11 @@
+import Navbar from "../components/Navbar";
+
 const episodes = () => {
-  return <></>;
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 };
 
 export default episodes;

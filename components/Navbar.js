@@ -1,6 +1,9 @@
 import Link from "next/link";
 import Navitem from "./Navitem";
+import Input from "./Input";
+import { useSelector } from "react-redux";
 const Navbar = () => {
+  const input = useSelector((state) => state.input);
   return (
     <>
       <div className="bg-red-500 flex justify-between">
@@ -9,6 +12,7 @@ const Navbar = () => {
         </Link>
         <Navitem />
       </div>
+      {input && <Input />}
     </>
   );
 };
