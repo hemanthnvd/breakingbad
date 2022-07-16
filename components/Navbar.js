@@ -3,7 +3,7 @@ import Navitem from "./Navitem";
 import Input from "./Input";
 import { useSelector } from "react-redux";
 const Navbar = () => {
-  const input = useSelector((state) => state.input);
+  const input = useSelector((state) => state.input.button);
   return (
     <>
       <div className="bg-red-500 flex justify-between">

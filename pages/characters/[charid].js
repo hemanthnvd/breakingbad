@@ -11,17 +11,14 @@ const CharDetail = () => {
     const fetchCharDetail = async () => {
       let res = await fetch(`https://www.breakingbadapi.com/api/characters/${charId}`);
       res = await res.json();
-      setDet((prevState)=>(
-        res[0]
-      ));
-      
+      setDet((prevState) => res[0]);
     };
     fetchCharDetail();
   }, []);
   return (
     <>
-    <Navbar/>
-    <CharacterDetail det={det}/>
+      <Navbar />
+      <CharacterDetail det={det} />
     </>
   );
 };

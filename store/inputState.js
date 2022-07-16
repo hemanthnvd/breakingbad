@@ -1,11 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
-const inputState = 0;
+const inputState = { button: false, text: "" };
 const inputSlice = createSlice({
   name: "input",
   initialState: inputState,
   reducers: {
-    toggle: (state) => {
-      return !state;
+    toggle(state) {
+      state.button = !state.button;
+    },
+    liveText(state, action) {
+      state.text = action.payload;
     },
   },
 });
