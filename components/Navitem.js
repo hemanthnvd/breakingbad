@@ -16,8 +16,11 @@ const Navitem = () => {
   const router = useRouter();
   const dispatch = useDispatch();
   const input = useSelector((state) => state.input.button);
-  const clickHandler = () => {
+  const homeHandler = () => {
     router.push("/");
+  };
+  const loginHandler = () => {
+    router.push("/login");
   };
   const searchHandler = () => {
     dispatch(inputActions.toggle());
@@ -26,12 +29,12 @@ const Navitem = () => {
 
   return (
     <div className="flex justify-end ">
-      <HomeIcon className="h-5 w-5 m-5 cursor-pointer" onClick={clickHandler} />
+      <HomeIcon className="h-5 w-5 m-5 cursor-pointer" onClick={homeHandler} />
       {input && <XIcon className="h-5 w-5 m-5 cursor-pointer" onClick={searchHandler} />}
       {input || <SearchIcon className="h-5 w-5 m-5 cursor-pointer" onClick={searchHandler} />}
       <HeartIcon className="h-5 w-5 m-5 cursor-pointer" />
       <UserIcon className="h-5 w-5 m-5 cursor-pointer" />
-      <LoginIcon className="h-5 w-5 m-5 cursor-pointer" />
+      <LoginIcon className="h-5 w-5 m-5 cursor-pointer" onClick={loginHandler} />
       <Link href="https://github.com/hemanthnvd/breakingbad">
         <a target="_blank">
           <LinkIcon className="h-5 w-5 m-5 cursor-pointer" />
