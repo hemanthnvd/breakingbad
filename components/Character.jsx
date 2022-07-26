@@ -1,21 +1,32 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import CharacterCard from "./ui/CharacterCard";
+import { useSelector, useDispatch } from "react-redux";
+import { charactersAction } from "../store/characters";
 
 const Character = () => {
-  const charList = [];
-  const [charLi, setCharLi] = useState([]);
+  const dispatch = useDispatch();
+  const charList = useSelector((state) => state.characters.charList);
+  const text = useSelector((state) => state.input.text);
+  const charLi = [];
   useEffect(() => {
     const fetchChar = async () => {
       let res = await fetch("https://www.breakingbadapi.com/api/characters");
       res = await res.json();
       for (const item in res) {
-        charList.push(<CharacterCard char_id={res[item].char_id} name={res[item].name} img={res[item].img} />);
+        charLi.push(
+          <CharacterCard char_id={res[item].char_id} name={res[item].name} img={res[item].img} />
+        );
       }
-      setCharLi(charList);
+      dispatch(charactersAction.addChar(charLi));
     };
     fetchChar();
   }, []);
-  return <div className="grid grid-cols-4 gap-4">{charLi}</div>;
+
+  return (
+    <div className="grid grid-cols-4 gap-4">
+      {charList.filter((jsx) => jsx.props.name.toLowerCase().includes(text.toLowerCase()))}
+    </div>
+  );
 };
 
 export default Character;

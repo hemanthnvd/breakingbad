@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar";
-const login = () => {
+const Login = () => {
   const inputClasses = "rounded cursor-pointer my-5 ml-96 bg-red-100 w-1/3 h-8 ";
   const submitHandler = (e) => {
     e.preventDefault();
@@ -31,4 +31,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;
