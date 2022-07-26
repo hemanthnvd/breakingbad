@@ -19,6 +19,7 @@ const login = () => {
         <input type="password" placeholder="re-enter password" className={inputClasses} />
         <br />
         <button
+          disabled
           type="submit"
           onClick={submitHandler}
           className="rounded bg-red-900 text-red-600 p-2 my-5 ml-96"
