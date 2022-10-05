@@ -13,7 +13,17 @@ const Episode = () => {
       let Epi = await fetch("https://www.breakingbadapi.com/api/episodes");
       Epi = await Epi.json();
       for (const ep in Epi) {
-        epiLi.push(<EpisodeCard ep_id={Epi[ep].episode_id} title={Epi[ep].title} />);
+        epiLi.push(
+          <EpisodeCard
+            ep_id={Epi[ep].episode_id}
+            title={Epi[ep].title}
+            season={Epi[ep].season}
+            air_date={Epi[ep].air_date}
+            characters={Epi[ep].characters}
+            episode={Epi[ep].episode}
+            series={Epi[ep].series}
+          />
+        );
       }
       dispatch(episodesAction.addEpi(epiLi));
     };
