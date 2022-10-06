@@ -5,7 +5,6 @@ const characterSlice = createSlice({
   initialState: charactersState,
   reducers: {
     addChar(state, action) {
-      console.log(action.payload);
       if (state.charList.length === 0) {
         state.charList = [...action.payload];
       }

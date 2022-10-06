@@ -5,7 +5,6 @@ const episodesSlice = createSlice({
   initialState: episodesState,
   reducers: {
     addEpi(state, action) {
-      console.log(action.payload);
       if (state.epiList.length === 0) {
         state.epiList = [...action.payload];
       }

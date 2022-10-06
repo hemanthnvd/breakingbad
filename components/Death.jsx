@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import DeathCard from "./ui/DeathCard";
 import { useSelector, useDispatch } from "react-redux";
 import { deathsAction } from "../store/deaths";
+
 const Death = () => {
   const dispatch = useDispatch();
   const deathList = useSelector((state) => state.deaths.deaList);
@@ -9,7 +10,7 @@ const Death = () => {
   let deathLi = [];
   useEffect(() => {
     const fetchDea = async () => {
-      let Dea = await fetch("https://www.breakingbadapi.com/api/quotes");
+      let Dea = await fetch("https://www.breakingbadapi.com/api/deaths");
       Dea = await Dea.json();
       for (const De in Dea) {
         deathLi.push(
@@ -29,7 +30,8 @@ const Death = () => {
     fetchDea();
   }, []);
   return (
-    <>{deathList.filter((jsx) => jsx.props.responsible.toLowerCase().includes(text.toLowerCase()))}</>
+    // <>{deathList.filter((jsx) => jsx.props.responsible.toLowerCase().includes(text.toLowerCase()))}</>
+    <>{deathList}</>
   );
 };
 
