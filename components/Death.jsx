@@ -30,8 +30,9 @@ const Death = () => {
     fetchDea();
   }, []);
   return (
-    // <>{deathList.filter((jsx) => jsx.props.responsible.toLowerCase().includes(text.toLowerCase()))}</>
-    <>{deathList}</>
+    <>
+      {deathList.filter((jsx) => jsx.props.responsible.toLowerCase().includes(text.toLowerCase()))}
+    </>
   );
 };
 
