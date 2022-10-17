@@ -33,6 +33,9 @@ const Navitem = () => {
     dispatch(inputActions.toggle());
     dispatch(inputActions.liveText(""));
   };
+  const accountHandler = () => {
+    router.push("/account");
+  };
 
   return (
     <div className="flex justify-end ">
@@ -40,7 +43,7 @@ const Navitem = () => {
       {input && <XIcon className="h-5 w-5 m-5 cursor-pointer" onClick={searchHandler} />}
       {input || <SearchIcon className="h-5 w-5 m-5 cursor-pointer" onClick={searchHandler} />}
       <HeartIcon className="h-5 w-5 m-5 cursor-pointer" />
-      <UserIcon className="h-5 w-5 m-5 cursor-pointer" />
+      <UserIcon className="h-5 w-5 m-5 cursor-pointer" onClick={accountHandler} />
       {user ? (
         <LogoutIcon className="h-5 w-5 m-5 cursor-pointer" onClick={logoutHandler} />
       ) : (
