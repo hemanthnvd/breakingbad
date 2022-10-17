@@ -3,6 +3,7 @@ import {
   HomeIcon,
   LinkIcon,
   LoginIcon,
+  LogoutIcon,
   SearchIcon,
   UserIcon,
   XIcon,
@@ -11,15 +12,21 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useSelector, useDispatch } from "react-redux";
 import { inputActions } from "../store/inputState";
+import { useAuth } from "./ui/Auth/AuthContext";
 
 const Navitem = () => {
   const router = useRouter();
   const dispatch = useDispatch();
   const input = useSelector((state) => state.input.button);
+  const { user, logout } = useAuth();
   const homeHandler = () => {
     router.push("/");
   };
   const loginHandler = () => {
+    router.push("/login");
+  };
+  const logoutHandler = () => {
+    logout();
     router.push("/login");
   };
   const searchHandler = () => {
@@ -34,7 +41,11 @@ const Navitem = () => {
       {input || <SearchIcon className="h-5 w-5 m-5 cursor-pointer" onClick={searchHandler} />}
       <HeartIcon className="h-5 w-5 m-5 cursor-pointer" />
       <UserIcon className="h-5 w-5 m-5 cursor-pointer" />
-      <LoginIcon className="h-5 w-5 m-5 cursor-pointer" onClick={loginHandler} />
+      {user ? (
+        <LogoutIcon className="h-5 w-5 m-5 cursor-pointer" onClick={logoutHandler} />
+      ) : (
+        <LoginIcon className="h-5 w-5 m-5 cursor-pointer" onClick={loginHandler} />
+      )}
       <Link href="https://github.com/hemanthnvd/breakingbad">
         <a target="_blank">
           <LinkIcon className="h-5 w-5 m-5 cursor-pointer" />

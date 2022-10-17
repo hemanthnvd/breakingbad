@@ -2,8 +2,10 @@ import Navbar from "../components/Navbar";
 import Link from "next/link";
 import { useAuth } from "../components/ui/Auth/AuthContext";
 import { useState } from "react";
+import { useRouter } from "next/router";
 const Register = () => {
-  const { user, signup } = useAuth();
+  const router = useRouter();
+  const { user, signup, logout } = useAuth();
   const inputClasses = "rounded cursor-pointer my-2  bg-red-100 w-1/3 h-8 ";
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -26,6 +28,8 @@ const Register = () => {
       setMessage({ state: false, value: "" });
       try {
         await signup(email, password);
+        logout();
+        router.push("/login");
       } catch (error) {
         setMessage({ state: true, value: error.message });
       }
