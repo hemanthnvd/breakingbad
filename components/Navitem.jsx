@@ -12,7 +12,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useSelector, useDispatch } from "react-redux";
 import { inputActions } from "../store/inputState";
-import { useAuth } from "./ui/Auth/AuthContext";
+import { useAuth } from "./Auth/AuthContext";
 
 const Navitem = () => {
   const router = useRouter();

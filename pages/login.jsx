@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import Navbar from "../components/Navbar";
-import { useAuth } from "../components/ui/Auth/AuthContext";
+import { useAuth } from "../components/Auth/AuthContext";
 const Login = () => {
   const inputClasses = "rounded cursor-pointer my-2  bg-red-100 w-1/3 h-8 ";
   const router = useRouter();

@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import Link from "next/link";
-import { useAuth } from "../components/ui/Auth/AuthContext";
+import { useAuth } from "../components/Auth/AuthContext";
 import { useState } from "react";
 import { useRouter } from "next/router";
 const Register = () => {

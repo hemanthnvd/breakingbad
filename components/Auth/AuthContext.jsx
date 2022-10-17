@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import { auth } from "../../../src/firebase-config";
+import { auth } from "../../src/firebase-config";
 import {
   onAuthStateChanged,
   createUserWithEmailAndPassword,
