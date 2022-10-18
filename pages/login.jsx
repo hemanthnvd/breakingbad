@@ -33,10 +33,10 @@ const Login = () => {
   const googleHandler = () => {
     loginGoogle(provider)
       .then((result) => {
-        console.log(result);
+        setMessage({ state: false, value: "" });
       })
       .catch((error) => {
-        console.log(error);
+        setMessage({ state: true, value: error.message });
       });
   };
   return (

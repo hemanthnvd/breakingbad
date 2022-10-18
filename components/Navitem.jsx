@@ -36,13 +36,16 @@ const Navitem = () => {
   const accountHandler = () => {
     router.push("/account");
   };
+  const favHandler = () => {
+    router.push("/favourites");
+  };
 
   return (
     <div className="flex justify-end ">
       <HomeIcon className="h-5 w-5 m-5 cursor-pointer" onClick={homeHandler} />
       {input && <XIcon className="h-5 w-5 m-5 cursor-pointer" onClick={searchHandler} />}
       {input || <SearchIcon className="h-5 w-5 m-5 cursor-pointer" onClick={searchHandler} />}
-      <HeartIcon className="h-5 w-5 m-5 cursor-pointer" />
+      <HeartIcon className="h-5 w-5 m-5 cursor-pointer" onClick={favHandler} />
       <UserIcon className="h-5 w-5 m-5 cursor-pointer" onClick={accountHandler} />
       {user ? (
         <LogoutIcon className="h-5 w-5 m-5 cursor-pointer" onClick={logoutHandler} />

@@ -1,16 +1,60 @@
 import { HeartIcon } from "@heroicons/react/outline";
+import { doc, getDoc, updateDoc, arrayUnion, arrayRemove } from "firebase/firestore";
 import { useRouter } from "next/router";
+import { useState } from "react";
+import { db } from "../../src/firebase-config";
+import { useAuth } from "../Auth/AuthContext";
+
 const CharacterCard = (props) => {
+  const [inList, setInList] = useState(false);
   const router = useRouter();
+  const { user } = useAuth();
+  const getData = async () => {
+    const userSnap = await getDoc(doc(db, "users", user.uid));
+    setInList(userSnap.data().fav.includes(props.char_id));
+  };
+  getData();
   const showCharDetail = () => {
     router.push(`/characters/${props.char_id}`);
   };
+  const favChar = async () => {
+    if (inList) {
+      await updateDoc(doc(db, "users", user.uid), {
+        fav: arrayRemove(props.char_id),
+      });
+      setInList(!inList);
+    } else {
+      await updateDoc(doc(db, "users", user.uid), {
+        fav: arrayUnion(props.char_id),
+      });
+      setInList(!inList);
+    }
+
+    // await setDoc(doc(db, "users", user.uid), { fav: [] });
+  };
   return (
-    <div className="cursor-pointer rounded bg-[#379557] m-5 w-fit " onClick={showCharDetail}>
-      <img src={props.img} alt="bbimage" className="h-64 rounded-t" />
+    <div className="rounded bg-[#379557] m-5 w-fit ">
+      <img
+        src={props.img}
+        alt="bbimage"
+        className="h-64 rounded-t cursor-pointer"
+        onClick={showCharDetail}
+      />
       <div className="flex justify-between">
-        <h1 className="m-2.5">{props.name}</h1>
-        <HeartIcon className="cursor-pointer h-5 w-5 m-2.5 bg-white text-gray-600 rounded-xl " />
+        <h1 className="my-2.5 mx-1 cursor-pointer" onClick={showCharDetail}>
+          {props.name}
+        </h1>
+        {inList ? (
+          <HeartIcon
+            className="cursor-pointer h-6 w-6 m-2 p-0.5 bg-red-900 text-gray-900 rounded-xl "
+            onClick={favChar}
+          />
+        ) : (
+          <HeartIcon
+            className="cursor-pointer h-6 w-6 m-2 p-0.5 bg-white text-gray-600 rounded-xl "
+            onClick={favChar}
+          />
+        )}
       </div>
     </div>
   );

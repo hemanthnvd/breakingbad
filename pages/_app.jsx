@@ -5,7 +5,7 @@ import ProtectedRoute from "../components/Auth/ProtectedRoute";
 import store from "../store/store";
 import "../styles/globals.css";
 
-const authRequired = ["/account"];
+const authRequired = ["/account","/favourites"];
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
