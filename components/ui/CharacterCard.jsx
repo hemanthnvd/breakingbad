@@ -1,5 +1,5 @@
 import { HeartIcon } from "@heroicons/react/outline";
-import { doc, getDoc, updateDoc, arrayUnion, arrayRemove } from "firebase/firestore";
+import { doc, setDoc, getDoc, updateDoc, arrayUnion, arrayRemove } from "firebase/firestore";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { db } from "../../src/firebase-config";
@@ -9,28 +9,35 @@ const CharacterCard = (props) => {
   const [inList, setInList] = useState(false);
   const router = useRouter();
   const { user } = useAuth();
-  const getData = async () => {
-    const userSnap = await getDoc(doc(db, "users", user.uid));
-    setInList(userSnap.data().fav.includes(props.char_id));
-  };
-  getData();
   const showCharDetail = () => {
     router.push(`/characters/${props.char_id}`);
   };
+  if (user) {
+    const getData = async () => {
+      const userSnap = await getDoc(doc(db, "users", user.uid));
+      if (!userSnap.data()) {
+        await setDoc(doc(db, "users", user.uid), { fav: [] });
+      }
+      setInList(userSnap.data()?.fav.includes(props.char_id));
+    };
+    getData();
+  }
   const favChar = async () => {
-    if (inList) {
-      await updateDoc(doc(db, "users", user.uid), {
-        fav: arrayRemove(props.char_id),
-      });
-      setInList(!inList);
+    if (user) {
+      if (inList) {
+        await updateDoc(doc(db, "users", user.uid), {
+          fav: arrayRemove(props.char_id),
+        });
+        setInList(!inList);
+      } else {
+        await updateDoc(doc(db, "users", user.uid), {
+          fav: arrayUnion(props.char_id),
+        });
+        setInList(!inList);
+      }
     } else {
-      await updateDoc(doc(db, "users", user.uid), {
-        fav: arrayUnion(props.char_id),
-      });
-      setInList(!inList);
+      router.push("/login");
     }
-
-    // await setDoc(doc(db, "users", user.uid), { fav: [] });
   };
   return (
     <div className="rounded bg-[#379557] m-5 w-fit ">
