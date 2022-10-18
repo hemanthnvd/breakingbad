@@ -4,6 +4,7 @@ import {
   onAuthStateChanged,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signInWithPopup,
   signOut,
 } from "firebase/auth";
 import { useEffect } from "react";
@@ -21,6 +22,7 @@ const AuthContextProvider = (props) => {
           uid: user.uid,
           email: user.email,
           displayName: user.displayName,
+          photoURL: user.photoURL,
         });
       } else {
         setUser(null);
@@ -34,12 +36,15 @@ const AuthContextProvider = (props) => {
   const login = (email, password) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
+  const loginGoogle = (provider) => {
+    return signInWithPopup(auth, provider);
+  };
   const logout = async () => {
     setUser(null);
     await signOut(auth);
   };
   return (
-    <AuthContext.Provider value={{ user, signup, login, logout }}>
+    <AuthContext.Provider value={{ user, signup, loginGoogle, login, logout }}>
       {props.children}
     </AuthContext.Provider>
   );

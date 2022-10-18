@@ -3,10 +3,11 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import { useAuth } from "../components/Auth/AuthContext";
+import { provider } from "../src/firebase-config";
 const Login = () => {
   const inputClasses = "rounded cursor-pointer my-2  bg-red-100 w-1/3 h-8 ";
   const router = useRouter();
-  const { user, login } = useAuth();
+  const { user, login, loginGoogle } = useAuth();
   if (user) {
     router.push("/account");
   }
@@ -29,6 +30,15 @@ const Login = () => {
       setMessage({ state: true, value: error.message });
     }
   };
+  const googleHandler = () => {
+    loginGoogle(provider)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <>
       <Navbar />
@@ -45,10 +55,13 @@ const Login = () => {
         <br />
         {message.state && <p>{message.value}</p>}
         <br />
-        <button className="rounded bg-red-900 text-red-600 w-1/12 p-2 my-5" onClick={loginHandler}>
+        <button className="rounded bg-red-900 text-red-600 w-1/12 p-2 my-2" onClick={loginHandler}>
           Login
         </button>
         <br />
+        <button className="p-2 my-1 bg-green-200 rounded" onClick={googleHandler}>
+          Signin with google
+        </button>
         <Link href="/register" className="text-teal-600">
           New user?
         </Link>
