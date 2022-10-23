@@ -3,6 +3,7 @@ import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Category from "../components/Category";
 import styles from "../styles/Home.module.css";
+import About from "../components/About";
 
 const Home = () => {
   return (
@@ -14,15 +15,19 @@ const Home = () => {
       </Head>
 
       <Navbar />
-      <Image
-        src={"/675486.jpg"}
-        // src={"/577286.png"}
-        alt="Home Picture"
-        width={1920}
-        height={1080}
-        className=""
-      />
+      <div>
+        <Image
+          src={"/new.jpg"}
+          // src={"/577286.png"}
+          alt="Home Picture"
+          width={1920}
+          height={865}
+          className="absolute z-0"
+        />
+        {/* <h1 className="z-1 m-5">hello</h1> */}
+      </div>
       <Category />
+      <About />
     </>
   );
 };

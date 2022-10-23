@@ -11,12 +11,15 @@ const Category = () => {
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus et nisi maxime quae
             voluptate recusandae sapiente magnam beatae iure tenetur?
           </p>
-          <button className="bg-transparent hover:bg-[#FF9042] text-[#FF5147] font-semibold hover:text-white py-2 px-4 border border-[#FF5147] hover:border-transparent rounded-full m-2" onClick={()=>router.push("/characters")}>
+          <button
+            className="bg-transparent hover:bg-[#FF9042] text-[#FF5147] font-semibold hover:text-white py-2 px-4 border border-[#FF5147] hover:border-transparent rounded-full m-2"
+            onClick={() => router.push("/characters")}
+          >
             Get Characters
           </button>
         </div>
         <div className="flex justify-center">
-          <Image src={"/mike.gif"} width={325} height={182} className="rounded-full" />
+          <Image src={"/3.gif"} width={325} height={182} className="rounded-xl" />
         </div>
       </div>
       <div className="justify-between m-16 grid grid-cols-2">
@@ -26,12 +29,15 @@ const Category = () => {
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus et nisi maxime quae
             voluptate recusandae sapiente magnam beatae iure tenetur?
           </p>
-          <button className="bg-transparent hover:bg-[#FF9042] text-[#FF5147] font-semibold hover:text-white py-2 px-4 border border-[#FF5147] hover:border-transparent rounded-full m-2" onClick={()=>router.push("/episodes")}>
+          <button
+            className="bg-transparent hover:bg-[#FF9042] text-[#FF5147] font-semibold hover:text-white py-2 px-4 border border-[#FF5147] hover:border-transparent rounded-full m-2"
+            onClick={() => router.push("/episodes")}
+          >
             Get Episodes
           </button>
         </div>
         <div className="flex justify-center">
-          <Image src={"/hector.gif"} width={325} height={182} className="rounded-full" m-5 />
+          <Image src={"/1.gif"} width={325} height={182} className="rounded-xl" m-5 />
         </div>
       </div>
       <div className="justify-between m-16 grid grid-cols-2">
@@ -41,12 +47,15 @@ const Category = () => {
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus et nisi maxime quae
             voluptate recusandae sapiente magnam beatae iure tenetur?
           </p>
-          <button className="bg-transparent hover:bg-[#FF9042] text-[#FF5147] font-semibold hover:text-white py-2 px-4 border border-[#FF5147] hover:border-transparent rounded-full m-2" onClick={()=>router.push("/quotes")}>
+          <button
+            className="bg-transparent hover:bg-[#FF9042] text-[#FF5147] font-semibold hover:text-white py-2 px-4 border border-[#FF5147] hover:border-transparent rounded-full m-2"
+            onClick={() => router.push("/quotes")}
+          >
             Get Quotes
           </button>
         </div>
         <div className="flex justify-center">
-          <Image src={"/saymyname.gif"} width={325} height={182} className="rounded-full " />
+          <Image src={"/saymyname.gif"} width={325} height={182} className="rounded-xl " />
         </div>
       </div>
       <div className="justify-between m-16 grid grid-cols-2">
@@ -56,12 +65,15 @@ const Category = () => {
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus et nisi maxime quae
             voluptate recusandae sapiente magnam beatae iure tenetur?
           </p>
-          <button className="bg-transparent hover:bg-[#FF9042] text-[#FF5147] font-semibold hover:text-white py-2 px-4 border border-[#FF5147] hover:border-transparent rounded-full m-2" onClick={()=>router.push("/deaths")}>
+          <button
+            className="bg-transparent hover:bg-[#FF9042] text-[#FF5147] font-semibold hover:text-white py-2 px-4 border border-[#FF5147] hover:border-transparent rounded-full m-2"
+            onClick={() => router.push("/deaths")}
+          >
             Get Deaths
           </button>
         </div>
         <div className="flex justify-center">
-          <Image src={"/giphy.gif"} width={325} height={182} className="rounded-full" />
+          <Image src={"/giphy.gif"} width={325} height={182} className="rounded-xl" />
         </div>
       </div>
     </>
