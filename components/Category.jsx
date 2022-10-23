@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Card from "./ui/Card";
 
 const Category = () => {
-  let li=[];
+  let li = [];
   const [list, changeList] = useState([]);
   useEffect(() => {
     const fetchapi = async () => {
@@ -12,15 +12,13 @@ const Category = () => {
         li.push(<Card k={key}>{key.toUpperCase()}</Card>);
       }
       changeList(li);
-      li=[];
+      li = [];
     };
     fetchapi();
   }, []);
   return (
     <>
-      <div className="flex mx-14 my-12 justify-between">
-        {list}
-      </div>
+      <div className="flex mx-14 my-12 justify-between ">{list}</div>
     </>
   );
 };

@@ -13,6 +13,7 @@ import { useRouter } from "next/router";
 import { useSelector, useDispatch } from "react-redux";
 import { inputActions } from "../store/inputState";
 import { useAuth } from "./Auth/AuthContext";
+import Input from "./Input";
 
 const Navitem = () => {
   const router = useRouter();
@@ -42,19 +43,24 @@ const Navitem = () => {
 
   return (
     <div className="flex justify-end ">
-      <HomeIcon className="h-5 w-5 m-5 cursor-pointer" onClick={homeHandler} />
-      {input && <XIcon className="h-5 w-5 m-5 cursor-pointer" onClick={searchHandler} />}
-      {input || <SearchIcon className="h-5 w-5 m-5 cursor-pointer" onClick={searchHandler} />}
-      <HeartIcon className="h-5 w-5 m-5 cursor-pointer" onClick={favHandler} />
-      <UserIcon className="h-5 w-5 m-5 cursor-pointer" onClick={accountHandler} />
+      {input && <Input />}
+      <HomeIcon className="h-5 w-5 m-5 cursor-pointer text-[#FFFFFF] " onClick={homeHandler} />
+      {input && (
+        <XIcon className="h-5 w-5 m-5 cursor-pointer text-[#FFFFFF]" onClick={searchHandler} />
+      )}
+      {input || (
+        <SearchIcon className="h-5 w-5 m-5 cursor-pointer text-[#FFFFFF]" onClick={searchHandler} />
+      )}
+      <HeartIcon className="h-5 w-5 m-5 cursor-pointer text-[#FFFFFF]" onClick={favHandler} />
+      <UserIcon className="h-5 w-5 m-5 cursor-pointer text-[#FFFFFF]" onClick={accountHandler} />
       {user ? (
-        <LogoutIcon className="h-5 w-5 m-5 cursor-pointer" onClick={logoutHandler} />
+        <LogoutIcon className="h-5 w-5 m-5 cursor-pointer text-[#FFFFFF]" onClick={logoutHandler} />
       ) : (
-        <LoginIcon className="h-5 w-5 m-5 cursor-pointer" onClick={loginHandler} />
+        <LoginIcon className="h-5 w-5 m-5 cursor-pointer text-[#FFFFFF]" onClick={loginHandler} />
       )}
       <Link href="https://github.com/hemanthnvd/breakingbad">
         <a target="_blank">
-          <LinkIcon className="h-5 w-5 m-5 cursor-pointer" />
+          <LinkIcon className="h-5 w-5 m-5 cursor-pointer text-[#FFFFFF]" />
         </a>
       </Link>
     </div>
