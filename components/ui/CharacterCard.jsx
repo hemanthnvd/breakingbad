@@ -53,7 +53,7 @@ const CharacterCard = (props) => {
         </h1>
         {inList ? (
           <HeartIcon
-            className="cursor-pointer h-6 w-6 m-2 p-0.5 bg-red-900 text-gray-900 rounded-xl "
+            className="cursor-pointer h-6 w-6 m-2 p-0.5 bg-[#FF0266] text-gray-900 rounded-xl "
             onClick={favChar}
           />
         ) : (

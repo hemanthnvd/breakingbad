@@ -1,24 +1,69 @@
-import { useEffect, useState } from "react";
-import Card from "./ui/Card";
-
+import Image from "next/image";
+import { useRouter } from "next/router";
 const Category = () => {
-  let li = [];
-  const [list, changeList] = useState([]);
-  useEffect(() => {
-    const fetchapi = async () => {
-      const res = await fetch("https://www.breakingbadapi.com/api/");
-      res = await res.json();
-      for (const key in res) {
-        li.push(<Card k={key}>{key.toUpperCase()}</Card>);
-      }
-      changeList(li);
-      li = [];
-    };
-    fetchapi();
-  }, []);
+  const router = useRouter();
   return (
     <>
-      <div className="flex mx-14 my-12 justify-between ">{list}</div>
+      <div className="justify-between m-16 grid grid-cols-2">
+        <div className="text-white">
+          <h1 className="m-2 text-3xl">Characters</h1>
+          <p className="mx-2 my-8">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus et nisi maxime quae
+            voluptate recusandae sapiente magnam beatae iure tenetur?
+          </p>
+          <button className="bg-transparent hover:bg-[#FF9042] text-[#FF5147] font-semibold hover:text-white py-2 px-4 border border-[#FF5147] hover:border-transparent rounded-full m-2" onClick={()=>router.push("/characters")}>
+            Get Characters
+          </button>
+        </div>
+        <div className="flex justify-center">
+          <Image src={"/mike.gif"} width={325} height={182} className="rounded-full" />
+        </div>
+      </div>
+      <div className="justify-between m-16 grid grid-cols-2">
+        <div className="text-white">
+          <h1 className="m-2 text-3xl">Episodes</h1>
+          <p className="mx-2 my-8">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus et nisi maxime quae
+            voluptate recusandae sapiente magnam beatae iure tenetur?
+          </p>
+          <button className="bg-transparent hover:bg-[#FF9042] text-[#FF5147] font-semibold hover:text-white py-2 px-4 border border-[#FF5147] hover:border-transparent rounded-full m-2" onClick={()=>router.push("/episodes")}>
+            Get Episodes
+          </button>
+        </div>
+        <div className="flex justify-center">
+          <Image src={"/hector.gif"} width={325} height={182} className="rounded-full" m-5 />
+        </div>
+      </div>
+      <div className="justify-between m-16 grid grid-cols-2">
+        <div className="text-white">
+          <h1 className="m-2 text-3xl">Quotes</h1>
+          <p className="mx-2 my-8">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus et nisi maxime quae
+            voluptate recusandae sapiente magnam beatae iure tenetur?
+          </p>
+          <button className="bg-transparent hover:bg-[#FF9042] text-[#FF5147] font-semibold hover:text-white py-2 px-4 border border-[#FF5147] hover:border-transparent rounded-full m-2" onClick={()=>router.push("/quotes")}>
+            Get Quotes
+          </button>
+        </div>
+        <div className="flex justify-center">
+          <Image src={"/saymyname.gif"} width={325} height={182} className="rounded-full " />
+        </div>
+      </div>
+      <div className="justify-between m-16 grid grid-cols-2">
+        <div className="text-white">
+          <h1 className="m-2 text-3xl">Deaths</h1>
+          <p className="mx-2 my-8">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus et nisi maxime quae
+            voluptate recusandae sapiente magnam beatae iure tenetur?
+          </p>
+          <button className="bg-transparent hover:bg-[#FF9042] text-[#FF5147] font-semibold hover:text-white py-2 px-4 border border-[#FF5147] hover:border-transparent rounded-full m-2" onClick={()=>router.push("/deaths")}>
+            Get Deaths
+          </button>
+        </div>
+        <div className="flex justify-center">
+          <Image src={"/giphy.gif"} width={325} height={182} className="rounded-full" />
+        </div>
+      </div>
     </>
   );
 };
