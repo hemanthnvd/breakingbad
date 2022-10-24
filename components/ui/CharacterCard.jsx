@@ -40,7 +40,7 @@ const CharacterCard = (props) => {
     }
   };
   return (
-    <div className="rounded bg-[#379557] m-5 w-fit ">
+    <div className="rounded bg-[#016936] m-5 w-fit text-black ">
       <img
         src={props.img}
         alt="bbimage"
@@ -48,7 +48,7 @@ const CharacterCard = (props) => {
         onClick={showCharDetail}
       />
       <div className="flex justify-between">
-        <h1 className="my-2.5 mx-1 cursor-pointer" onClick={showCharDetail}>
+        <h1 className="my-2.5 mx-2 cursor-pointer" onClick={showCharDetail}>
           {props.name}
         </h1>
         {inList ? (

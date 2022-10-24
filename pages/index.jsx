@@ -18,7 +18,6 @@ const Home = () => {
       <div>
         <Image
           src={"/new.jpg"}
-          // src={"/577286.png"}
           alt="Home Picture"
           width={1920}
           height={865}

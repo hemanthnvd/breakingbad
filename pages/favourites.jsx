@@ -23,8 +23,8 @@ const Favourites = () => {
   return (
     <>
       <Navbar />
-      <h1>Your Favourite Characters</h1>
-      <div className="grid grid-cols-4 gap-4">
+      <h1 className="text-[#FEF8DC] text-xl m-5 ">Your Favourite Characters</h1>
+      <div className="grid grid-cols-4 gap-4 m-8">
         {favArray.map((id) => (
           <FavCard id={id} />
         ))}
