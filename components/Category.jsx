@@ -19,7 +19,7 @@ const Category = () => {
           </button>
         </div>
         <div className="flex justify-center">
-          <Image src={"/3.gif"} width={325} height={182} className="rounded-xl" />
+          <Image src={"/3.gif"} alt="chargif" width={325} height={182} className="rounded-xl" />
         </div>
       </div>
       <div className="justify-between m-16 grid grid-cols-2">
@@ -37,7 +37,7 @@ const Category = () => {
           </button>
         </div>
         <div className="flex justify-center">
-          <Image src={"/1.gif"} width={325} height={182} className="rounded-xl" m-5 />
+          <Image src={"/1.gif"} alt="epigif" width={325} height={182} className="rounded-xl" m-5 />
         </div>
       </div>
       <div className="justify-between m-16 grid grid-cols-2">
@@ -55,7 +55,13 @@ const Category = () => {
           </button>
         </div>
         <div className="flex justify-center">
-          <Image src={"/saymyname.gif"} width={325} height={182} className="rounded-xl " />
+          <Image
+            src={"/saymyname.gif"}
+            alt="quotegif"
+            width={325}
+            height={182}
+            className="rounded-xl "
+          />
         </div>
       </div>
       <div className="justify-between m-16 grid grid-cols-2">
@@ -73,7 +79,13 @@ const Category = () => {
           </button>
         </div>
         <div className="flex justify-center">
-          <Image src={"/giphy.gif"} width={325} height={182} className="rounded-xl" />
+          <Image
+            src={"/giphy.gif"}
+            alt="deathgif"
+            width={325}
+            height={182}
+            className="rounded-xl"
+          />
         </div>
       </div>
     </>
