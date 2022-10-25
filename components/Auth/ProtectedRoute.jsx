@@ -10,7 +10,6 @@ const ProtectedRoute = (props) => {
       router.push("/login");
     }
   }, [router, user]);
-
   return <>{user ? props.children : null}</>;
 };
 

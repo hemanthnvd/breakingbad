@@ -3,7 +3,7 @@ import Navitem from "./Navitem";
 const Navbar = () => {
   return (
     <>
-      <div className="bg-[#101110] flex justify-between">
+      <div className="bg-[#101110] flex justify-between" id="home">
         <Link href="/">
           <img src="/bblogo3.png" alt="bblogo" className="h-16 ml-5 cursor-pointer" />
         </Link>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Link as Liink} from "react-scroll";
 import "bootstrap-icons/font/bootstrap-icons.css";
 const Footer = () => {
   return (
@@ -13,7 +14,7 @@ const Footer = () => {
         <div className="m-5 px-12">
           <div className="flex justify-around">
             <div className="flex space-x-4 justify-center">
-              <Link href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMVJHKXSCVBmHhQCtfFRsSkJnkJKrnBsmRZKbZNHmGdzNmQjJddLWqkFmMnWCpLsDJrBHhR">
+              <Link href="mailto:hemanthnvd@gmail.com">
                 <a target="_blank">
                   <i className="bi bi-envelope"></i>
                 </a>
@@ -40,7 +41,14 @@ const Footer = () => {
               </Link>
             </div>
             <Link href="/login">Login</Link>
-            <h1>↑ Back to Top</h1>
+            <Liink
+              to="home"
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              ↑ Back to Top
+            </Liink>
           </div>
         </div>
       </div>

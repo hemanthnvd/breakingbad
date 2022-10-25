@@ -15,6 +15,7 @@ export const useAuth = () => useContext(AuthContext);
 
 const AuthContextProvider = (props) => {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -27,6 +28,7 @@ const AuthContextProvider = (props) => {
       } else {
         setUser(null);
       }
+      setLoading(false);
     });
     return () => unsubscribe();
   }, []);
@@ -45,7 +47,7 @@ const AuthContextProvider = (props) => {
   };
   return (
     <AuthContext.Provider value={{ user, signup, loginGoogle, login, logout }}>
-      {props.children}
+      {loading ? null : props.children}
     </AuthContext.Provider>
   );
 };
