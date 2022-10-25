@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Category from "../components/Category";
 import styles from "../styles/Home.module.css";
 import About from "../components/About";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -27,6 +28,7 @@ const Home = () => {
       </div>
       <Category />
       <About />
+      <Footer/>
     </>
   );
 };

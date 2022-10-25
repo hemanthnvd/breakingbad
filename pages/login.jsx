@@ -76,13 +76,20 @@ const Login = () => {
           Signin with google
         </button>
         <div className="flex justify-between">
-          <div className="m-5">
-            <Link href="/register" className="text-teal-600">
+          <div className="m-5 hover:text-teal-100">
+            <Link href="/register" className="">
               New user?
             </Link>
           </div>
 
-          <button className="m-5">Forgot password?</button>
+          <button
+            onClick={() => {
+              router.push("/reset");
+            }}
+            className="m-5 hover:text-teal-100"
+          >
+            Forgot password?
+          </button>
         </div>
       </div>
     </>
