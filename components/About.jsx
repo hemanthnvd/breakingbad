@@ -1,7 +1,7 @@
 import Image from "next/image";
 const About = () => {
   return (
-    <div className="text-white m-16 grid grid-cols-2">
+    <div className="text-white mx-2 my-16 md:m-16 grid grid-cols-2">
       <div className="text-white">
         <h1 className="m-2 text-3xl text-[#016936] font-bold">ABOUT</h1>
         <p className="mx-2 my-8">
@@ -23,7 +23,7 @@ const About = () => {
           Giancarlo Esposito, Jonathan Banks .
         </p>
       </div>
-      <div className="m-20">
+      <div className="m-20 2xl:flex 2xl:justify-center">
         <Image src={"/1234.png"} alt="img" width={341.88} height={212.52} className="rounded-xl" />
       </div>
     </div>

@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 body {
-  background-color: #1B1C1C;
+  background-color: #1b1c1c;
   user-select: none;
+}
+#explore{
+  left: 10%;
 }

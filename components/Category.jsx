@@ -4,7 +4,7 @@ const Category = () => {
   const router = useRouter();
   return (
     <>
-      <div className="justify-between m-16 mt-5 grid grid-cols-2" id="category">
+      <div className="justify-between m-2 md:m-16 mt-16 grid grid-cols-2" id="category">
         <div className="text-white">
           <h1 className="m-2 text-3xl">Characters</h1>
           <p className="mx-2 my-8">
@@ -22,7 +22,7 @@ const Category = () => {
           <Image src={"/3.gif"} alt="chargif" width={325} height={182} className="rounded-xl" />
         </div>
       </div>
-      <div className="justify-between m-16 grid grid-cols-2">
+      <div className="justify-between mx-2 my-16 md:m-16 grid grid-cols-2">
         <div className="text-white">
           <h1 className="m-2 text-3xl">Episodes</h1>
           <p className="mx-2 my-8">
@@ -40,7 +40,7 @@ const Category = () => {
           <Image src={"/1.gif"} alt="epigif" width={325} height={182} className="rounded-xl" m-5 />
         </div>
       </div>
-      <div className="justify-between m-16 grid grid-cols-2">
+      <div className="justify-between mx-2 my-16 md:m-16 grid grid-cols-2">
         <div className="text-white">
           <h1 className="m-2 text-3xl">Quotes</h1>
           <p className="mx-2 my-8">
@@ -64,7 +64,7 @@ const Category = () => {
           />
         </div>
       </div>
-      <div className="justify-between m-16 grid grid-cols-2">
+      <div className="justify-between mx-2 my-16 md:m-16 grid grid-cols-2">
         <div className="text-white">
           <h1 className="m-2 text-3xl">Deaths</h1>
           <p className="mx-2 my-8">
