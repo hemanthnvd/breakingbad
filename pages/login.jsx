@@ -77,9 +77,7 @@ const Login = () => {
         </button>
         <div className="flex justify-between">
           <div className="m-5 hover:text-teal-100">
-            <Link href="/register" className="">
-              New user?
-            </Link>
+            <Link href="/register">New user?</Link>
           </div>
 
           <button

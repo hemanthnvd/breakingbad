@@ -1,12 +1,12 @@
 import {
   HeartIcon,
   HomeIcon,
-  LinkIcon,
   LoginIcon,
   LogoutIcon,
   SearchIcon,
   UserIcon,
   XIcon,
+  CodeIcon,
 } from "@heroicons/react/outline";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -60,7 +60,7 @@ const Navitem = () => {
       )}
       <Link href="https://github.com/hemanthnvd/breakingbad">
         <a target="_blank">
-          <LinkIcon className="h-5 w-5 m-5 cursor-pointer text-[#FFFFFF]" />
+          <CodeIcon className="h-5 w-5 m-5 cursor-pointer text-[#FFFFFF]" />
         </a>
       </Link>
     </div>

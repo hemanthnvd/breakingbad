@@ -4,7 +4,7 @@ const Category = () => {
   const router = useRouter();
   return (
     <>
-      <div className="justify-between m-16 grid grid-cols-2">
+      <div className="justify-between m-16 mt-5 grid grid-cols-2">
         <div className="text-white">
           <h1 className="m-2 text-3xl">Characters</h1>
           <p className="mx-2 my-8">
