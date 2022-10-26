@@ -36,9 +36,9 @@ const CharacterDetail = (props) => {
     }
   };
   return (
-    <div className="flex">
+    <div className="md:flex">
       <img src={props.det.img} alt="charImage" className="rounded m-12 h-96" />
-      <div className="m-12 text-white text-xl">
+      <div className="m-12 text-white text-lg md:text-xl">
         <p className="m-3">Name : {props.det.name}</p>
         <p className="m-3">Birthday : {props.det.birthday}</p>
         <p className="m-3">Occupaion : {props.det.occupation}</p>

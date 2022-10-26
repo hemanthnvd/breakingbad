@@ -6,17 +6,16 @@ const Footer = () => {
     <>
       <div className=" grid grid-cols-2 bg-[#000101]  text-white">
         <div className="m-5 xl:flex xl:justify-around xl:px-16 md:px-12">
-          <h1 className="text-2xl">BreakingBad</h1>
-          <h1 className="flex text-sm items-center text-gray-600">
+          <h1 className="text-lg md:text-2xl">BreakingBad</h1>
+          <h1 className="flex text-xs md:text-sm items-center text-gray-600">
             © Breaking Bad App, All rights reserved.
           </h1>
         </div>
 
-        <div className="xl:flex xl:justify-around m-5 px-12">
+        <div className="xl:flex xl:justify-around my-5 md:m-5 px-12">
           <div className="flex justify-center">
-
             <Liink to="home" spy={true} smooth={true} duration={500}>
-              ↑ Back to Top
+              ↑ To top
             </Liink>
           </div>
           <div className="flex space-x-4 justify-center ">

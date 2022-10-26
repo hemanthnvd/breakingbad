@@ -19,7 +19,7 @@ const Home = () => {
       <div className="relative z-0">
         <Image src={"/new.jpg"} alt="Home Picture" width={1920} height={865} />
         <div className="absolute z-1 top-2/3" id="explore">
-          <h1 className="text-2xl text-white mb-2">Get Started</h1>
+          <h1 className="text-xl md:text-2xl text-white mb-2">Get Started</h1>
           <Link
             to="category"
             spy={true}

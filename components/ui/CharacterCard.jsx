@@ -40,28 +40,30 @@ const CharacterCard = (props) => {
     }
   };
   return (
-    <div className="rounded bg-[#016936] m-5 w-fit text-black ">
-      <img
-        src={props.img}
-        alt="bbimage"
-        className="h-64 rounded-t cursor-pointer"
-        onClick={showCharDetail}
-      />
-      <div className="flex justify-between">
-        <h1 className="my-2.5 mx-2 cursor-pointer" onClick={showCharDetail}>
-          {props.name}
-        </h1>
-        {inList ? (
-          <HeartIcon
-            className="cursor-pointer h-6 w-6 m-2 p-0.5 bg-[#FF0266] text-gray-900 rounded-xl "
-            onClick={favChar}
-          />
-        ) : (
-          <HeartIcon
-            className="cursor-pointer h-6 w-6 m-2 p-0.5 bg-white text-gray-600 rounded-xl "
-            onClick={favChar}
-          />
-        )}
+    <div className="flex items-center justify-center">
+      <div className="rounded bg-[#016936] m-5 w-fit text-black ">
+        <img
+          src={props.img}
+          alt="bbimage"
+          className="h-64 rounded-t cursor-pointer"
+          onClick={showCharDetail}
+        />
+        <div className="flex justify-between">
+          <h1 className="my-2.5 mx-2 cursor-pointer" onClick={showCharDetail}>
+            {props.name}
+          </h1>
+          {inList ? (
+            <HeartIcon
+              className="cursor-pointer h-6 w-6 m-2 p-0.5 bg-[#FF0266] text-gray-900 rounded-xl "
+              onClick={favChar}
+            />
+          ) : (
+            <HeartIcon
+              className="cursor-pointer h-6 w-6 m-2 p-0.5 bg-white text-gray-600 rounded-xl "
+              onClick={favChar}
+            />
+          )}
+        </div>
       </div>
     </div>
   );

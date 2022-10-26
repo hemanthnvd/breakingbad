@@ -23,7 +23,7 @@ const Character = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-4 gap-4">
+    <div className="grid grid-cols-2 md:grid-cols-4 md:gap-4 2xl:grid-cols-5">
       {charList.filter((jsx) => jsx.props.name.toLowerCase().includes(text.toLowerCase()))}
     </div>
   );

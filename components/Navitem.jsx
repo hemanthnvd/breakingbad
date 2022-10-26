@@ -14,6 +14,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { inputActions } from "../store/inputState";
 import { useAuth } from "./Auth/AuthContext";
 import Input from "./Input";
+import MobileNav from "./MobileNav";
 
 const Navitem = () => {
   const router = useRouter();
@@ -42,28 +43,37 @@ const Navitem = () => {
   };
 
   return (
-    <div className="flex justify-end ">
-      {input && <Input />}
-      <HomeIcon className="h-5 w-5 m-5 cursor-pointer text-[#FFFFFF] " onClick={homeHandler} />
-      {input && (
-        <XIcon className="h-5 w-5 m-5 cursor-pointer text-[#FFFFFF]" onClick={searchHandler} />
-      )}
-      {input || (
-        <SearchIcon className="h-5 w-5 m-5 cursor-pointer text-[#FFFFFF]" onClick={searchHandler} />
-      )}
-      <HeartIcon className="h-5 w-5 m-5 cursor-pointer text-[#FFFFFF]" onClick={favHandler} />
-      <UserIcon className="h-5 w-5 m-5 cursor-pointer text-[#FFFFFF]" onClick={accountHandler} />
-      {user ? (
-        <LogoutIcon className="h-5 w-5 m-5 cursor-pointer text-[#FFFFFF]" onClick={logoutHandler} />
-      ) : (
-        <LoginIcon className="h-5 w-5 m-5 cursor-pointer text-[#FFFFFF]" onClick={loginHandler} />
-      )}
-      <Link href="https://github.com/hemanthnvd/breakingbad">
-        <a target="_blank">
-          <CodeIcon className="h-5 w-5 m-5 cursor-pointer text-[#FFFFFF]" />
-        </a>
-      </Link>
-    </div>
+    <>
+      <MobileNav />
+      <div className="hidden md:flex md:justify-end ">
+        {input && <Input />}
+        <HomeIcon className="h-5 w-5 m-5 cursor-pointer text-[#FFFFFF] " onClick={homeHandler} />
+        {input && (
+          <XIcon className="h-5 w-5 m-5 cursor-pointer text-[#FFFFFF]" onClick={searchHandler} />
+        )}
+        {input || (
+          <SearchIcon
+            className="h-5 w-5 m-5 cursor-pointer text-[#FFFFFF]"
+            onClick={searchHandler}
+          />
+        )}
+        <HeartIcon className="h-5 w-5 m-5 cursor-pointer text-[#FFFFFF]" onClick={favHandler} />
+        <UserIcon className="h-5 w-5 m-5 cursor-pointer text-[#FFFFFF]" onClick={accountHandler} />
+        {user ? (
+          <LogoutIcon
+            className="h-5 w-5 m-5 cursor-pointer text-[#FFFFFF]"
+            onClick={logoutHandler}
+          />
+        ) : (
+          <LoginIcon className="h-5 w-5 m-5 cursor-pointer text-[#FFFFFF]" onClick={loginHandler} />
+        )}
+        <Link href="https://github.com/hemanthnvd/breakingbad">
+          <a target="_blank">
+            <CodeIcon className="h-5 w-5 m-5 cursor-pointer text-[#FFFFFF]" />
+          </a>
+        </Link>
+      </div>
+    </>
   );
 };
 
