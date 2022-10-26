@@ -19,27 +19,27 @@ const Footer = () => {
             </Liink>
           </div>
           <div className="flex space-x-4 justify-center ">
-            <Link href="mailto:hemanthnvd@gmail.com">
+            <Link legacyBehavior href="mailto:hemanthnvd@gmail.com">
               <a target="_blank">
                 <i className="bi bi-envelope"></i>
               </a>
             </Link>
-            <Link href="https://github.com/hemanthnvd">
+            <Link legacyBehavior href="https://github.com/hemanthnvd">
               <a target="_blank">
                 <i className="bi bi-github"></i>
               </a>
             </Link>
-            <Link href="https://www.instagram.com/hemanthnvd/">
+            <Link legacyBehavior href="https://www.instagram.com/hemanthnvd/">
               <a target="_blank">
                 <i className="bi bi-instagram"></i>
               </a>
             </Link>
-            <Link href="https://www.linkedin.com/in/hemanthnvd/">
+            <Link legacyBehavior href="https://www.linkedin.com/in/hemanthnvd/">
               <a target="_blank">
                 <i className="bi bi-linkedin"></i>
               </a>
             </Link>
-            <Link href="https://twitter.com/hemanthnvd">
+            <Link legacyBehavior href="https://twitter.com/hemanthnvd">
               <a target="_blank">
                 <i className="bi bi-twitter"></i>
               </a>

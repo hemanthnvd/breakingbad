@@ -16,7 +16,7 @@ const EpisodeCard = (props) => {
         <h3>
           Characters :{" "}
           {props.characters.map((item) => (
-            <Link key={item} href={`/characters/`}>{`${item}, `}</Link>
+            <Link legacyBehavior key={item} href={`/characters/`}>{`${item}, `}</Link>
           ))}
         </h3>
         <h3>Series : {props.series}</h3>

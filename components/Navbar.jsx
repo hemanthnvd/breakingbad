@@ -8,7 +8,7 @@ const Navbar = () => {
     <>
       <div className="bg-[#101110]">
         <div className="flex justify-between" id="home">
-          <Link href="/">
+          <Link legacyBehavior href="/" legacyBehavior>
             <img
               src="/bblogo3.png"
               alt="bblogo"

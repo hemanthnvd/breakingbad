@@ -73,7 +73,7 @@ const Register = () => {
           Signup
         </button>
         <div className="mt-3">
-          <Link href="/login">{"<<go back to login page"}</Link>
+          <Link legacyBehavior href="/login">{"<<go back to login page"}</Link>
         </div>
       </div>
     </>

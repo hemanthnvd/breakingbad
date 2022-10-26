@@ -67,7 +67,7 @@ const Navitem = () => {
         ) : (
           <LoginIcon className="h-5 w-5 m-5 cursor-pointer text-[#FFFFFF]" onClick={loginHandler} />
         )}
-        <Link href="https://github.com/hemanthnvd/breakingbad">
+        <Link legacyBehavior href="https://github.com/hemanthnvd/breakingbad">
           <a target="_blank">
             <CodeIcon className="h-5 w-5 m-5 cursor-pointer text-[#FFFFFF]" />
           </a>

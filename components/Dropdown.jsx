@@ -60,7 +60,7 @@ const Dropdown = () => {
           )}
         </div>
         <div className="flex items-center justify-center my-1.5">
-          <Link href="https://github.com/hemanthnvd/breakingbad">
+          <Link legacyBehavior href="https://github.com/hemanthnvd/breakingbad">
             <a target="_blank">Github Repository</a>
           </Link>
         </div>
