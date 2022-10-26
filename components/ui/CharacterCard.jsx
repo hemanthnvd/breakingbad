@@ -41,7 +41,7 @@ const CharacterCard = (props) => {
   };
   return (
     <div className="flex items-center justify-center">
-      <div className="rounded bg-[#016936] m-5 w-fit text-black ">
+      <div className="rounded bg-[#00AB41] m-5 w-fit text-black ">
         <img
           src={props.img}
           alt="bbimage"

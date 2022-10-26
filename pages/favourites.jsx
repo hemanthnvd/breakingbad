@@ -26,7 +26,7 @@ const Favourites = () => {
       <h1 className="text-[#FEF8DC] text-xl m-5 ">Your Favourite Characters</h1>
       <div className="grid grid-cols-2 2xl:grid-cols-5 md:grid-cols-4 md:gap-4 md:m-8">
         {favArray.map((id) => (
-          <FavCard id={id} />
+          <FavCard key={id} id={id} />
         ))}
       </div>
     </>

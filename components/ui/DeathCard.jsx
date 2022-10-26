@@ -1,7 +1,7 @@
 const DeathCard = (props) => {
   return (
     <>
-      <div className="rounded bg-[#016936] m-5 p-3">
+      <div className="rounded bg-[#00AB41] m-5 p-3">
         <h1>Dead : {props.death}</h1>
         <h1>Cause : {props.cause}</h1>
         <h1>Responsible : {props.responsible}</h1>

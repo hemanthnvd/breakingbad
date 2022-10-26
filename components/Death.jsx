@@ -30,14 +30,14 @@ const Death = () => {
     };
     fetchDea();
   }, []);
-  const optChange = (e) =>{
+  const optChange = (e) => {
     console.log(e.target.value);
-    if(e.target.value==="death"){
-      setFilter({death: true, cause: false, responsible: false});
-    }else if(e.target.value==="cause"){
-      setFilter({death: false, cause: true, responsible: false});
-    }else if(e.target.value==="responsible"){
-      setFilter({death: false, cause: false, responsible: true});
+    if (e.target.value === "death") {
+      setFilter({ death: true, cause: false, responsible: false });
+    } else if (e.target.value === "cause") {
+      setFilter({ death: false, cause: true, responsible: false });
+    } else if (e.target.value === "responsible") {
+      setFilter({ death: false, cause: false, responsible: true });
     }
   };
   return (
@@ -45,10 +45,19 @@ const Death = () => {
       <div className="flex justify-end text-white m-2">
         <h1 className="m-2">Search by : </h1>
         <div className="inline-block relative w-40">
-          <select className="block appearance-none w-full bg-black border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded-xl shadow leading-tight focus:outline-none focus:shadow-outline" onChange={optChange}>
-            <option value={"death"}>Dead</option>
-            <option value={"cause"}>Cause</option>
-            <option value={"responsible"}>Responsible</option>
+          <select
+            className="block appearance-none w-full bg-black border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded-xl shadow leading-tight focus:outline-none focus:shadow-outline"
+            onChange={optChange}
+          >
+            <option value={"death"} className="text-xs md:text-base">
+              Dead
+            </option>
+            <option value={"cause"} className="text-xs md:text-base">
+              Cause
+            </option>
+            <option value={"responsible"} className="text-xs md:text-base">
+              Responsible
+            </option>
           </select>
           <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
             <svg
