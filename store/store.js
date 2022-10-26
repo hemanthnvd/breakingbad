@@ -4,6 +4,7 @@ import charactersReducer from "./characters";
 import episodesReducer from "./episodes";
 import quotesReducer from "./quotes";
 import deathsReducer from "./deaths";
+import navReducer from "./navState";
 
 const store = configureStore({
   reducer: {
@@ -12,6 +13,7 @@ const store = configureStore({
     episodes: episodesReducer,
     quotes: quotesReducer,
     deaths: deathsReducer,
+    nav: navReducer,
   },
 });
 export default store;
