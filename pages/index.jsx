@@ -6,6 +6,7 @@ import styles from "../styles/Home.module.css";
 import About from "../components/About";
 import Footer from "../components/Footer";
 import { Link } from "react-scroll";
+import i from "../public/new.jpg";
 
 const Home = () => {
   return (
@@ -17,15 +18,24 @@ const Home = () => {
       </Head>
       <Navbar />
       <div className="relative z-0">
-        <Image src={"/new.jpg"} alt="Home Picture" width={1920} height={865} />
-        <div className="absolute z-1 top-2/3" id="explore">
-          <h1 className="text-xl md:text-2xl text-white mb-2">Get Started</h1>
+        <Image src={i} alt="Home Picture" />
+        <div className="absolute z-1 md:top-2/3" id="explore">
+          <h1 className="text-lg md:text-3xl text-white mb-1 md:mb-2">Get Started</h1>
           <Link
             to="category"
             spy={true}
             smooth={true}
             duration={500}
-            className="relative inline-block text-sm group"
+            className="px-3 py-2 md:hidden font-medium bg-blue-50 hover:bg-blue-100 hover:text-blue-600 text-blue-500 rounded-lg text-xs"
+          >
+            Explore
+          </Link>
+          <Link
+            to="category"
+            spy={true}
+            smooth={true}
+            duration={500}
+            className="relative md:inline-block text-base group hidden"
           >
             <span className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
               <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>

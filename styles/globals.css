@@ -3,9 +3,16 @@
 @tailwind utilities;
 
 body {
-  background-color: #1b1c1c;
+  background-color: #050910;
+  /* background-color: #1b1c1c; */
   user-select: none;
 }
-#explore{
+#explore {
   left: 10%;
+}
+@media (max-width: 700px) {
+  #explore {
+    top:50%;
+    left: 20px;
+  }
 }

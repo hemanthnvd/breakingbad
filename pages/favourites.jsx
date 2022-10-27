@@ -8,13 +8,19 @@ import FavCard from "../components/ui/FavCard";
 const Favourites = () => {
   const { user } = useAuth();
   const [favArray, setFavArray] = useState([]);
+  const [message, setMessage] = useState({ state: true, value: "Loading..." });
   useState(() => {
     const getData = async () => {
       const userSnap = await getDoc(doc(db, "users", user.uid));
       if (userSnap.exists()) {
-        setFavArray(userSnap.data().fav);
+        setMessage({ state: false, value: "" });
+        if (userSnap.data().fav.length === 0) {
+          setMessage({ state: true, value: "No favourites yet!" });
+        } else {
+          setFavArray(userSnap.data().fav);
+        }
       } else {
-        console.log("No favourites yet!");
+        setMessage({ state: true, value: "No favourites yet!" });
       }
     };
     getData();
@@ -24,6 +30,7 @@ const Favourites = () => {
     <>
       <Navbar />
       <h1 className="text-[#FEF8DC] text-xl m-5 ">Your Favourite Characters</h1>
+      {message && <h1 className="text-[#FEF8DC] text-xl mx-5 my-10 ">{message.value}</h1>}
       <div className="grid grid-cols-2 2xl:grid-cols-5 md:grid-cols-4 md:gap-4 md:m-8">
         {favArray.map((id) => (
           <FavCard key={id} id={id} />

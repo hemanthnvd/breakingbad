@@ -24,7 +24,7 @@ const About = () => {
             Odenkirk, Giancarlo Esposito, Jonathan Banks .
           </p>
         </div>
-        <div className="m-2 mt-8 flex justify-center">
+        <div className="m-2 mt-8 flex justify-center ">
           <Image
             src={"/1234.png"}
             alt="img"

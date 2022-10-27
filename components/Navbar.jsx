@@ -6,7 +6,7 @@ const Navbar = () => {
   const hamState = useSelector((state) => state.nav.ham);
   return (
     <>
-      <div className="bg-[#101110]">
+      <div className="bg-[#010001]">
         <div className="flex justify-between" id="home">
           <Link href="/">
             <img

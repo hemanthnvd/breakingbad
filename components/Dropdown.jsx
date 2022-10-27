@@ -14,7 +14,7 @@ const Dropdown = () => {
   };
   return (
     <>
-      <div className="text-white absolute z-10 bg-[#101110] w-full md:hidden">
+      <div className="text-white absolute z-10 bg-[#010001] w-full md:hidden">
         <div className="flex items-center justify-center my-1.5">
           <button
             onClick={() => {
@@ -22,7 +22,7 @@ const Dropdown = () => {
               router.push("/");
             }}
           >
-            Home
+            Home 🏠
           </button>
         </div>
         <div className="flex items-center justify-center my-1.5 ">
@@ -32,7 +32,7 @@ const Dropdown = () => {
               router.push("/favourites");
             }}
           >
-            Favourites
+            Favourites ❤️
           </button>
         </div>
         <div className="flex items-center justify-center my-1.5">
@@ -42,7 +42,7 @@ const Dropdown = () => {
               router.push("/account");
             }}
           >
-            My account
+            My account 👤
           </button>
         </div>
         <div className="flex items-center justify-center my-1.5">
@@ -55,13 +55,13 @@ const Dropdown = () => {
                 router.push("/login");
               }}
             >
-              Login
+              Login 📲
             </button>
           )}
         </div>
-        <div className="flex items-center justify-center my-1.5">
+        <div className="flex items-center justify-center mt-1.5 mb-3">
           <Link href="https://github.com/hemanthnvd/breakingbad">
-            <a target="_blank">Github Repository</a>
+            <a target="_blank">Github 🗂️</a>
           </Link>
         </div>
       </div>
