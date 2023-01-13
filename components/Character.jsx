@@ -10,7 +10,7 @@ const Character = () => {
   const charLi = [];
   useEffect(() => {
     const fetchChar = async () => {
-      let res = await fetch("https://www.breakingbadapi.com/api/characters");
+      let res = await fetch("http://localhost:3000/api/characters");
       res = await res.json();
       for (const item in res) {
         charLi.push(
