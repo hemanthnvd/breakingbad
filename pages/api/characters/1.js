@@ -1,5 +1,5 @@
 export default function handler(req, res) {
-  res.status(200).json({
+  res.status(200).json([{
     char_id: 1,
     name: "Walter White",
     birthday: "09-07-1958",
@@ -11,5 +11,5 @@ export default function handler(req, res) {
     portrayed: "Bryan Cranston",
     category: "Breaking Bad",
     better_call_saul_appearance: [],
-  });
+  }]);
 }
