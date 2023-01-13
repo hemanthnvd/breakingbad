@@ -10,7 +10,7 @@ const Episode = () => {
   let epiLi = [];
   useEffect(() => {
     const fetchEpi = async () => {
-      let Epi = await fetch("https://www.breakingbadapi.com/api/episodes");
+      let Epi = await fetch("https://www.hemanthnvd.com/api/episodes");
       Epi = await Epi.json();
       for (const ep in Epi) {
         epiLi.push(
