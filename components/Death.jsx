@@ -11,7 +11,7 @@ const Death = () => {
   const [filter, setFilter] = useState({ death: true, cause: false, responsible: false });
   useEffect(() => {
     const fetchDea = async () => {
-      let Dea = await fetch("https://www.breakingbadapi.com/api/deaths");
+      let Dea = await fetch("https://breakingbadwebapp.netlify.app/api/deaths");
       Dea = await Dea.json();
       for (const De in Dea) {
         deathLi.push(

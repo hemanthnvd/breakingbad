@@ -10,7 +10,7 @@ const Character = () => {
   const charLi = [];
   useEffect(() => {
     const fetchChar = async () => {
-      let res = await fetch("https://www.hemanthnvd.com/api/characters");
+      let res = await fetch("https://breakingbadwebapp.netlify.app/api/characters");
       res = await res.json();
       for (const item in res) {
         charLi.push(

@@ -11,7 +11,7 @@ const Quote = () => {
   const [filter, setFilter] = useState(true);
   useEffect(() => {
     const fetchQuo = async () => {
-      let Quo = await fetch("https://www.hemanthnvd.com/api/quotes");
+      let Quo = await fetch("https://breakingbadwebapp.netlify.app/api/quotes");
       Quo = await Quo.json();
       for (const qu in Quo) {
         quoLi.push(
