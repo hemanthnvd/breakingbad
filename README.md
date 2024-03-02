@@ -13,6 +13,32 @@ This website is built with React using the Next JS framework. The state manageme
 
 **Database:** Cloud Firestore (NO SQL)
 
+## Api endpoints
+
+Welcome to the Breaking Bad API. Start making your HTTP requests on this iconic TV-series.
+
+  Endpoint to retrieve information from all characters :
+  <a href="https://breakingbadwebapp.netlify.app/api/characters" target="_blank">https://breakingbadwebapp.netlify.app/api/characters</a>
+
+  Get single character :
+  <a href="https://breakingbadwebapp.netlify.app/api/characters/1" target="_blank">https://breakingbadwebapp.netlify.app/api/characters/1</a>
+
+  Get all episodes :
+  <a href="https://breakingbadwebapp.netlify.app/api/episodes" target="_blank">https://breakingbadwebapp.netlify.app/api/episodes</a>
+
+  Get all quotes :
+  <a href="https://breakingbadwebapp.netlify.app/api/quotes" target="_blank">https://breakingbadwebapp.netlify.app/api/quotes</a>
+
+## Credentials 
+
+Login to the app using these credentials
+
+  Link :
+  <a href="https://breakingbadwebapp.netlify.app/login" target="_blank">https://breakingbadwebapp.netlify.app/login</a>
+
+  Email : hemanthnvd@gmail.com
+  
+  Password : testing 
 
 ## Features
 

@@ -5,7 +5,7 @@ const FavCard = (props) => {
   const [temp, setTemp] = useState({});
   useEffect(() => {
     const getData = async () => {
-      let res = await fetch(`https://www.hemanthnvd.com/api/characters/${props.id}`);
+      let res = await fetch(`https://breakingbadwebapp.netlify.app/api/characters/${props.id}`);
       res = await res.json();
       setTemp(res[0]);
     };
